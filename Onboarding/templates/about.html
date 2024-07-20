@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Meaningful Mind Therapy Services</title>
-    <link rel="stylesheet" href="{% static 'css/about.css' %}?v=7">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}?v=10">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <style>
@@ -130,7 +130,7 @@
                         the lives and social conditions for people with mental health, substance use 
                         and trauma-related challenges, by promoting health, wellness and recovery in a 
                         meaningful way.<br> <br>  </P>
-                    <button class="bg-green-500 hover:bg-blue-500 p-4 mt-8 w-[250px] text-white text-xs font-sans uppercase font-bold  cursor-pointer">Book An Appointment</button>
+                   <a href="{% url 'Onboarding:contacts' %}"> <button class="bg-green-500 hover:bg-blue-500 p-4 mt-8 w-[250px] text-white text-xs font-sans uppercase font-bold  cursor-pointer">Book An Appointment</button></a>
                 </div>
                 <div class="about-2 p-5 mt-12" data-aos="fade-up"  data-aos-once="true">
                     <img class="md:w-[850px] w-full rounded-[50px]" src="{% static 'images/9953.jpg' %}" alt="">
