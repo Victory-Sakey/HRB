@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Meaningful Mind Therapy Services</title>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}?v=7">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <style>
+        .hidden {
+          display: none;
+        }
+        .transition-height {
+      transition: height 0.3s ease;
+      overflow: hidden;
+    }
+      </style>
+</head>
+<body class="bg-white">
+    
+<!-- NavBar -->
+    <header>
+        <nav class="bg-white py-5">
+            <div class="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
+              <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center">
+                  <!-- Logo -->
+                  <a class="navbar-brand" href="#"><img src="{% static 'images/mm logo.jpg' %}" alt="Logo" class="w-auto"></a>
+                </div>
+                <div class="flex flex-1 items-center justify-center md:items-stretch sm:justify-start">
+                  <div class="flex flex-shrink-0 items-center">
+                  </div>
+                  <div class="hidden lg:ml-6 lg:block">
+                    <div class="flex space-x-4">
+                      <a href="{% url 'Onboarding:home' %}" class="rounded-md px-3 py-2  text-sm uppercase font-medium" aria-current="page">HOME</a>
+                      <a href="{% url 'Onboarding:about' %}" class="rounded-md px-3 py-2 text-sm uppercase font-medium">About US</a>
+                      <a href="{% url 'Onboarding:services' %}" class=" px-3 py-2 text-sm uppercase font-medium active ">Our services</a>
+                      <a href="{% url 'Onboarding:contacts' %}" class=" px-3 py-2 text-sm uppercase font-medium">Contact us</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center lg:hidden">
+                  <!-- Mobile menu button-->
+                  <button type="button" class="relative toggle inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMenu()">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                    <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="hidden transition-height lg:hidden" id="mobile-menu">
+              <div class="space-y-1 px-2 pb-3 pt-2">
+                <a href="{% url 'Onboarding:home' %}" class="block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Home</a>
+                <a href="{% url 'Onboarding:about' %}" class=" block rounded-md px-3 py-2 text-base font-medium">About Us</a>
+                <a href="{% url 'Onboarding:services' %}" class=" active block rounded-md px-3 py-2 text-base font-medium">Our Services</a>
+                <a href="{% url 'Onboarding:contacts' %}" class=" block rounded-md px-3 py-2 text-base font-medium">Contact Us</a>
+              </div>
+            </div>
+          </nav>
+          
+          <script>
+            function toggleMenu() {
+              const menu = document.getElementById('mobile-menu');
+              if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.style.height = menu.scrollHeight + 'px';
+              } else {
+                menu.style.height = '0';
+                menu.addEventListener('transitionend', () => {
+                  menu.classList.add('hidden');
+                }, { once: true });
+              }
+            }
+          
+            function toggleUserMenu() {
+              const menu = document.getElementById('user-menu');
+              menu.classList.toggle('hidden');
+            }
+          </script>
+          
+          
+        
+      
+  
+      <div class="header bg-white">
+        <div class="logo">
+          <a class="navbar-brand" href="#"><img src="{% static 'images/mm logo.jpg' %}" alt=""></a>
+          
+        </div>
+        <div class="mail">
+          <a class= "mail-info" href=""><img src="{% static 'images/icons8-email-48.png' %}" style="padding-bottom: 17px;" alt=""> 
+          </a> 
+          <h3>EMAIL ADDRESS<br><a href="mailto:openhandhealthcare@gmail.com">info@mmtsofmd.com</a></h3>
+          <a class= "Call-info" href=""><img src="{% static 'images/icons8-phone-48.png' %}" style="padding-bottom: 7px;" alt=""></a>
+          <h3>EMERGENCY CALL<br><a href="{% url 'Onboarding:home' %}">410-304-7574
+
+          </a></h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <!-- Welcome Banner -->
+        <section id="welcome-banner" data-aos="fade-up"  data-aos-once="true">
+          <div class="background-image">
+            <img src="{% static 'images/people-meeting-support-group.jpg' %}" alt="" class="background">
+            <img src="{% static 'images/47250.jpg'%}" alt="" class="background">
+            <img src="{% static 'images/woman-therapy-session-attentive-psychologist-attentive-psychologist-holding-pencil-her-hands-making-written-notes-while-listening-her-client.jpg' %}" alt="" class="background">
+          </div>
+          <h1 class="font-mono font-extrabold text-left">OUR <span class="text-blue-400">SERVICES</span></h1>
+         <h3 class="font-bold font-mono text-white pl-[90px] uppercase">Home | Our Services</h3>
+        </section>
+        <!-- End of Welcome Banner -->
+
+        <section id="services" class=" py-5">
+        <div class="features container mx-auto justify-center mt:4 lg:mt-8">
+           <!-- title banner -->
+        <div data-aos="fade-up"  data-aos-once="true" class="title-banner">
+          <!-- <h1 class="lg:text-4xl font-bold md:text-3xl text-3xl text-center text-blue-500 capitalize">What We <span class="text-blue-500">do here</span></h1> -->
+          <div class="mx-auto max-w-2xl lg:text-center lg:pl-[0px] pl-5 lg:pr-[0px] pr-2 md:mb-8 " >
+            <h2 class="text-base  font-semibold leading-7 uppercase text-green-500">Our Services</h2>
+            <p class="mt-2 text-3xl font-bold tracking-tight uppercase text-blue-500 sm:text-4xl">what we do here</p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">Open Hand Healthcare services , you have the advantage and
+                convenience of receiving the best level of care at competitive pricings. Some of our
+                supreme services consist of but are not limited to the following: chore services,
+                companionship services, personal care services.</p>
+          </div>
+         </div>
+            <div class="features-items pt-5 container mx-auto">
+              <div data-aos="fade-up"  data-aos-once="true" class="feature-item pt-6 md:pt-0  px-10 md:px-16 lg:px-28 flex md:flex-row flex-col justify-center items-center align-middle">
+                <div class="feature-item-text md:text-left sm:mr-[10px]  text-center md:w-[750px]">
+                  <h1 class=" text-green-500 mb-1 font-bold lg:text-3xl md:text-2xl text-2xl">
+                    Psychiatric Rehabilitation Program (PRP)</h1>
+                  <p class="text-gray-500   text-[15px] md:text-[15px] lg:text-[18px] ">PRP services are provided through individual counseling and group activities. Recovery groups focus on helping members learn essential life skills for independent living and fulfilling meaningful life roles.
+
+                    Rehabilitation counselors provide community outreach services to assist members living in the larger community.</p>
+                </div>
+                <div class="feature-item-img mt-3 md:mt-[0px]">
+                    <img class="w-[500px] rounded-[20px]" src="{% static 'images/18593.jpg' %}" alt="">
+                </div>
+              </div>
+              <div data-aos="fade-up"  data-aos-once="true" class="feature-item  md:pt-0  px-10 md:px-16 lg:px-28 flex md:flex-row-reverse flex-col justify-center items-center align-middle mt-12">
+                <div class="feature-item-text md:text-left text-center sm:ml-[20px]  md:w-[750px]">
+                  <h1 class=" text-green-500 mb-1  font-bold lg:text-3xl md:text-2xl text-2xl">
+                    Intensive Outpatient (IOP)</h1>
+                  <p class="text-gray-500 pb-5 text-[15px]  md:text-[15px] lg:text-[18px] ">Our Intensive Outpatient Program (also known as IOP) is designed to provide you with the support you need as you begin steps towards independence. Whether you are stepping down your treatment or entering IOP as your initial step, our team will create an individualized plan based around your needs during early recovery.</p>
+                </div>
+                <div class="feature-item-img">
+                    <img class="w-[500px] rounded-[20px]" src="{% static 'images/18366.jpg' %}" alt="">
+                </div>
+              </div>
+              <div data-aos="fade-up"  data-aos-once="true" class="feature-item  md:pt-0  px-10 md:px-16 lg:px-28 flex md:flex-row flex-col justify-center items-center align-middle mt-12">
+                <div class="feature-item-text md:text-left sm:mr-[10px]  text-center md:w-[750px]">
+                  <h1 class="pb-1 text-green-500 font-bold lg:text-3xl md:text-2xl text-2xl">
+                    Outpatient Program (OP)</h1>
+                  <p class="text-gray-500   text-[15px] md:text-[15px] lg:text-[18px] ">Outpatient therapy (also known as OP) is the least intensive program we offer.  The outpatient treatment program provides regularly scheduled individual and group counseling. The program includes education on mental health issues, recovery and wellness. These comprehensive, coordinated, and defined services vary in the level of intensity dependent on the individual needs of the client seeking services. The outpatient program addresses a variety of needs, including, but not limited to, situational stressors, family relations, interpersonal relations, mental health issues, life span issues, psychiatric illnesses, addictions, and other traumas.</p>
+                </div>
+                <div class="feature-item-img mt-3 md:mt-[0px]">
+                    <img class="w-[500px] rounded-[20px]" src="{% static 'images/18506.jpg' %}" alt="">
+                </div>
+              </div>
+              <div data-aos="fade-up"  data-aos-once="true" class="feature-item  md:pt-0  px-10 md:px-16 lg:px-28 flex md:flex-row-reverse flex-col justify-center items-center align-middle mt-12">
+                <div class="feature-item-text md:text-left text-center sm:ml-[20px]  md:w-[750px]">
+                  <h1 class=" text-green-500 mb-1  font-bold lg:text-3xl md:text-2xl text-2xl">
+                    
+          Partial Hospitalization Program (PHP)</h1>
+                  <p class="text-gray-500 pb-5 text-[15px]  md:text-[15px] lg:text-[18px] ">This is an orientation and stabilization phase for clients starting care at Meaningful Minds. Clients receive education and information regarding symptoms, effects, and treatment of mental illness, medications, substance abuse, co-dependency and its effect on substance abuse treatment, the implementation of self-care. Services provide individual and group substance abuse counseling, education on the health consequences of substance abuse and dependence, and relapse prevention. </p>
+                </div>
+                <div class="feature-item-img">
+                    <img class="w-[500px] rounded-[20px]" src="{% static 'images/18557.jpg' %}" alt="">
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+        </section>
+        
+            
+        <!-- End of About Section -->
+
+       
+      <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+
+      
+ 
+<footer class="bg-blue-950 text-gray-600 body-font" data-aos="zoom-in"  data-aos-once="true">
+  <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    <a href="{% url 'Onboarding:home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+      <img  class="rounded-[20px] w-[250px]" src="{% static 'images/mm logo.jpg' %}">
+    </a>
+    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> 606 Edmonson Rd, 200-201 Catonsville, MD 21228
+    </p>
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+      <a href="mailto:info@mmtsofmd.com" class="mt-2 text-sm text-gray-200">info@mmtsofmd.com</a>
+    </span>
+  </div>
+</footer>
+ 
+
+      
+    </main>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 2000,
+    once: true,
+  });
+</script>
+
+    <script src="{% static 'js/app.js' %}?v=1"></script>
+</body>
+</html>
