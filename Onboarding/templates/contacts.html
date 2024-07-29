@@ -120,22 +120,19 @@
         </section>
         <!-- End of Welcome Banner -->
 
-         <div id="contacts" class="px-5 grid gap-8 grid-cols-1 md:grid-cols-2  pb-24 mx-auto bg-white text-gray-500 rounded-lg">
+         <div id="contacts" class="px-5 grid gap-8 grid-cols-1 md:grid-cols-2  pb-24 mx-auto container bg-white text-gray-500 rounded-lg md:mt-12">
     <div class="flex flex-col justify-center" data-aos="fade-up"  data-aos-once="true">
         <div>
-            <h2 class="text-4xl text-blue-500 lg:text-5xl font-bold leading-tight">
-               <span class="text-blue-500"> Lets talk</span> about everything!
+            <h2 class="text-4xl text-blue-500 lg:text-3xl font-bold leading-tight">
+               <span class="text-blue-500"> Schedule An Appointment
             </h2>
-            <div class="text-gray-500 mt-8">
-                Hate forms? Send us an&nbsp;
-                <a class="underline" href="mailto:info@mmtsofmd.com">
-                    email
-                </a>
-                instead.
+            <div class="text-gray-500 mt-3">
+              Please complete the form to schedule an appointment.
+              We will try our best to accommodate your request and will be in touch ASAP.
             </div>
         </div>
-        <div class="mt-12 text-center">
-            <img src="{% static 'images/48170.jpg' %}" alt="Contact" />
+        <div class="mt-5 text-center">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12353.921342989923!2d-76.746827!3d39.277356!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81e844b90e1ad%3A0xb04e822928ad60c!2sBaltimore%2C%20MD%2021228!5e0!3m2!1sen!2sus!4v1722049012402!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -144,26 +141,26 @@
     <form id="myForm" method="post" action="" data-submit-url="./Onboarding/views.py">
       {% csrf_token %} 
         <div>
-            <span class="uppercase text-sm text-green-600 font-bold">
+            <span class="uppercase text-sm text-gray-950">
                 Full Name
             </span>
             <div>{{ form.name }}</div>
         </div>
         <div class="mt-8">
-            <span class="uppercase text-sm text-green-600 font-bold">
+            <span class="uppercase text-sm text-gray-950">
                 Email
             </span>
           {{ form.email }}
         </div>
         <div class="mt-8">
-            <span class="uppercase text-sm text-green-600 font-bold">
+            <span class="uppercase text-sm text-gray-950">
                 Phone Number
             </span>
             {{ form.number }}
         </div>
         <div class="mt-8">
-            <span class="uppercase text-sm text-green-600 font-bold">
-                Message
+            <span class="uppercase text-sm text-gray-950">
+                Comment or Message
             </span>
                 {{ form.message }} 
         </div>
@@ -174,9 +171,11 @@
             >
                 Send Message
             </button>
+            <p class="mt-2">By submitting this form via this web portal, you acknowledge and accept the risks of communicating your health information via this unencrypted email and electronic messaging and wish to continue despite those risks. </p>
         </div>
     </form>
 </div>
+
 
 </main>
 

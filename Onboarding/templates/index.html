@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meaningful Mind Therapy Services</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=6">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=8">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <style>
@@ -16,6 +16,18 @@
       transition: height 0.3s ease;
       overflow: hidden;
     }
+
+    .faq-text p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.faq-text p.show {
+  max-height: 1000px; /* Adjust according to the content */
+  transition: max-height 0.5s ease-in;
+}
+
       </style>
 </head>
 <body>
@@ -125,12 +137,12 @@
         <section id="About">
             <div class="about mx-auto container flex lg:flex-row flex-col md:justify-center lg:justify-evenly  p-5 lg:p-2 xl:p-20">
                 <div class="about-1 p-5" data-aos="fade-up"  data-aos-once="true">
-                    <h1 class="text-blue-500 text-2xs  pb-3 font-extrabold ">Welcome!</h1>
+                    <h1 class="text-red-500 text-xl  pb-3 font-extrabold ">Welcome!</h1>
                     <P class="text-gray-950 text-left  text-2xl lg:text-2xl xl:text-3xl font-sans w-[100%] xl:w-[550px] lg:w-[450px] font-bold uppercase" style="letter-spacing: .1rem; word-spacing: .1rem;" >Even the strongest people need a little bit of help to work through some of 
                         life’s most challenging problems. Everyone has hurdles to overcome, and we’d 
                         love to help you along the way.
                         </P>
-                    <a href="{% url 'Onboarding:services' %}"><button class="bg-blue-500 p-4 mt-8 w-[200px] text-white text-xs font-sans uppercase font-bold  cursor-pointer">Our Services</button></a>
+                    <a href="{% url 'Onboarding:services' %}"><button class="bg-blue-500 p-4 mt-8 w-[200px] text-white text-2xs font-sans uppercase font-bold  cursor-pointer">Our Services</button></a>
                 </div>
                 <div class="about-2 pt-8 p-5 pb-4" data-aos="fade-up"  data-aos-once="true">
                     <p class="text-gray-500 font-sans  text-[18px] w-[100%] text-left">
@@ -171,10 +183,14 @@
           <div class="relative z-30 mx-auto max-w-7xl px-6 lg:px-8">
               <div class="mx-auto max-w-2xl lg:mx-0" data-aos="fade-up"  data-aos-once="true">
                   <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl z-50">WE <span class="text-blue-400">CARE</span></h2>
-                  <p class="mt-6 text-lg leading-8 text-gray-300 z-50">Our practice specializes in helping people who are struggling with addiction, 
-                    social and life skills, or behavior management. If you are trying to navigate 
-                    these areas of life, we’re confident that we have the experience to help you 
-                    rediscover what brings happiness to your life.
+                  <p class="mt-6 text-lg leading-8 text-gray-300 z-50">Our practice specializes in helping people who are struggling with addiction, social and life skills, or behavior management. If you are trying to navigate these areas of life, we’re confident that we have the experience to help you rediscover what brings happiness to your life. Through therapy, there is always a way to address the issues you face and learn coping strategies to help you both right now and in the future.
+
+                    Through therapy, we can get you on track to leading a happier, more fulfilling life by equipping you with the tools you need to more efficiently and confidently manage life’s challenges.
+                    
+                    It is never too late to start living the life you’ve always wanted.
+                    
+                    If you’re interested in becoming a better, happier, more fulfilled you,
+                    get started by reaching out today!
                     </p>
               </div>
               <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none z-50">
@@ -189,7 +205,167 @@
               </div>
           </div>
       </div>
+
       
+<div class="overflow-hidden bg-white py-20 sm:pt-24 pb-20">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base font-semibold leading-7 text-green-600">Affordable Therapy</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl">Rates & Insurance</p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">
+            $_____ per ______ minute session.
+            <br>
+            <br>
+            Depending on your current health insurance provider or employee benefit plan, it is possible for services to be covered in full or in part. Please contact your provider to verify how your plan compensates you for psychotherapy services.</p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+            <div class="relative">
+              <dt class="inline font-semibold text-green-900">
+                Payment. 
+              </dt>
+              <dd class="inline">We accept cash, check and all major credit cards as forms of payment. I also accept payment directly on my site via this page.
+
+              </dd>
+            </div>
+            <div class="relative">
+              <dt class="inline font-semibold text-green-900">
+               
+                Cancellation Policy. 
+              </dt>
+              <dd class="inline">If you are unable to attend a session, please make sure you cancel at least 24 hours beforehand. Otherwise, you may be charged for the full rate of the session.</dd>
+            </div>
+            <div class="relative">
+              <dt class="inline font-semibold text-green-900">
+                
+                Any Other Questions? 
+
+
+              </dt>
+              <dd class="inline">
+                Please contact us for any additional questions you may have. we look forward to hearing from you!
+                
+              </dd>
+            
+
+            </div>
+            <a href="{% url 'Onboarding:contacts' %}"><button class="bg-blue-500 p-4 mt-8 w-[200px] text-white text-2xs font-sans uppercase font-bold  hover:bg-green-900 cursor-pointer">Contact Us</button></a>
+          </dl>
+        </div>
+      </div>
+      <div class="">
+        <img src="{% static 'images/2148363603.jpg' %}" alt="Product screenshot" class="w-[28rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0" width="2432" height="1442">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      
+<section id="faq" class="">
+  <div class="faq container px-10  md:px-10 mx-auto pb-10">
+    <h1 class="text-4xl  text-blue-500 font-bold pb-10">Frequently asked questions</h1>
+    <div class="faq-items mx-auto container ">
+      <div class="faq-item  mx-auto container ">
+        <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
+          <h1 class="text-[18px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">Aren’t people who go to therapy weak?
+            <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
+              &plus;
+            </div>
+          </h1>
+          <p class="text-gray-500  md:text-[18px] text-[15px]">Not at all. People who ask for help know when they need it and have the courage to reach out. Everyone needs help now and then. In our work together, I’ll help you explore and identify your strengths and how to implement them to reduce the influence of the problems you are facing.
+
+          </p>
+          
+        </div>
+        
+      </div>
+      <div class="faq-item mx-auto container ">
+        
+        <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
+          <h1 class="text-[18px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">What’s the difference between talking to you or my best friend or family?
+            <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
+              <h3 class="cursor-pointer">&plus;</h3>
+          </div>
+          </h1>
+          <p class="text-gray-500 md:text-[18px] text-[15px]">The difference is between someone who can do something, and someone who has the training and experience to do that same thing professionally. A mental health professional can help you approach your situation in a new way– teach you new skills, gain different perspectives, listen to you without judgment or expectations, and help you listen to yourself. Furthermore, counseling is completely confidential. You won’t have to worry about others “knowing my business.” Lastly, if your situation provokes a great deal of negative emotion, and you’ve been confiding in a friend or family member, there is the risk that once you are feeling better you could start avoiding that person so you aren’t reminded of this difficult time in your life.
+
+          </p>
+          
+        </div>
+        
+      </div>
+      <div class="faq-item mx-auto container ">
+     
+        <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
+          <h1 class="text-[18px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">Why shouldn’t I just take medication?
+            <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
+              <h3 class="cursor-pointer">&plus;</h3>
+          </div>
+          </h1>
+          <p class="text-gray-500  md:text-[18px] text-[15px]">
+            Medication can be effective but it alone cannot solve all issues. Sometimes medication is needed in conjunction with counseling. Our work together is designed to explore and unpack the problems you are experiencing and expand on your strengths that can help you accomplish your personal goals.
+          </p>
+          
+        </div>
+        
+      </div>
+      <div class="faq-item mx-auto container ">
+       
+        <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
+          <h1 class="text-[18px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">
+            How does it work? What do I have to do in sessions?
+            <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
+              <h3 class="cursor-pointer">&plus;</h3>
+          </div>
+          </h1>
+          <p class="text-gray-500  md:text-[18px] text-[15px]">
+            Because each person has different issues and goals for counseling, it will be different depending on the individual. I tailor my therapeutic approach to your specific needs.
+          </p>
+          
+        </div>
+        
+      </div>
+      <div class="faq-item mx-auto container ">
+        
+        <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
+          <h1 class="text-[18px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">
+            How long will it take?
+            <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
+              <h3 class="cursor-pointer">&plus;</h3>
+          </div>
+          </h1>
+          <p class="text-gray-500 md:text-[18px] text-[15px]">
+            Unfortunately, this is not possible to say in a general FAQs page. Everyone’s circumstances are unique to them and the length of time counseling can take to allow you to accomplish your goals depends on your desire for personal development, your commitment, and the factors that are driving you to seek counseling in the first place.
+
+          </p>
+          
+        </div>
+        
+      </div>
+      <div class="faq-item mx-auto container ">
+
+        <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
+          <h1 class="text-[18px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">
+            I want to get the most out of therapy. What can I do to help?
+            <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
+              <h3 class="cursor-pointer">&plus;</h3>
+          </div>
+          </h1>
+          <p class="text-gray-500  md:text-[18px] text-[15px]">
+            I am so glad you are dedicated to getting the most out of your sessions. Your active participation and dedication will be crucial to your success.
+
+          </p>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+     </main> 
       <!--
   This example requires some changes to your config:
   
@@ -231,6 +407,30 @@
   });
 </script>
 
-    <script src="{% static 'js/app.js' %}?v=1"></script>
+<script>
+ 
+  document.addEventListener('DOMContentLoaded', function() {
+    const faqSymbols = document.querySelectorAll('.faq-symbol');
+    
+    faqSymbols.forEach(symbol => {
+      symbol.addEventListener('click', function() {
+        const faqText = this.closest('.faq-text');
+        const answer = faqText.querySelector('p');
+        const isExpanded = answer.classList.contains('show');
+
+        if (isExpanded) {
+          answer.classList.remove('show');
+          this.innerHTML = '&plus;';
+        } else {
+          answer.classList.add('show');
+          this.innerHTML = '&minus;';
+        }
+      });
+    });
+  });
+</script>
+
+
+    <script src="{% static 'js/app.js' %}?v=5"></script>
 </body>
 </html>

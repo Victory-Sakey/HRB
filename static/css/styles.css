@@ -4,6 +4,7 @@
 }
 
 
+
 /* Navbar Section */
 header a.navbar-brand img {
     width: 200px;
@@ -211,3 +212,4 @@ main #welcome-banner:before {
     background-color: rgb(6, 182, 6);
     transition: .3s ease-in-out;
 }
+
