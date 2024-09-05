@@ -8,7 +8,9 @@ from .forms import ContactForm
 # Create your views here.
 def home(request):
     return render(request , 'index.html')
-
+# meaningfulmindsllc@gmail.com
+# 606 Edmondson Ave Suite 200
+# 410-449-3988
 def about(request):
     return render(request , 'about.html')
 

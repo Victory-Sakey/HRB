@@ -114,9 +114,9 @@
         <div class="mail">
           <a class= "mail-info" href=""><img src="{% static 'images/icons8-email-48.png' %}" style="padding-bottom: 17px;" alt=""> 
           </a> 
-          <h3>EMAIL ADDRESS<br><a href="mailto:openhandhealthcare@gmail.com">info@mmtsofmd.com</a></h3>
+          <h3>EMAIL ADDRESS<br><a href="mailto:meaningfulmindsllc@gmail.com">meaningfulmindsllc@gmail.com</a></h3>
           <a class= "Call-info" href=""><img src="{% static 'images/icons8-phone-48.png' %}" style="padding-bottom: 7px;" alt=""></a>
-          <h3>EMERGENCY CALL<br><a href="{% url 'Onboarding:home' %}">410-304-7574
+          <h3>TELEPHONE<br><a href="{% url 'Onboarding:home' %}">410-449-3988
 
           </a></h3>
         </div>
@@ -126,13 +126,13 @@
     <!-- Main Starts Here -->
     <main>
         <!-- Welcome Banner -->
-        <section id="welcome-banner" data-aos="fade-up"  data-aos-once="true">
+        <section id="welcome-banner" >
           <div class="background-image">
             <img src="{% static 'images/people-meeting-support-group.jpg' %}" alt="" class="background">
             <img src="{% static 'images/47250.jpg'%}" alt="" class="background">
             <img src="{% static 'images/woman-therapy-session-attentive-psychologist-attentive-psychologist-holding-pencil-her-hands-making-written-notes-while-listening-her-client.jpg' %}" alt="" class="background">
           </div>
-          <h1 class="uppercase font-bold">"From Healing to <span class="text-blue-400 font-bold">Wholeness</span>"</h1>
+          <h1 style="font-family: cursive;" class="uppercase font-bold">"From Healing to <span class="text-blue-400 font-bold">Wholeness</span>"</h1>
           <a href="{% url 'Onboarding:about' %}"><button>Get Started</button></a>
         </section>
         <!-- End of Welcome Banner -->
@@ -141,15 +141,15 @@
         <section id="About">
             <div class="about mx-auto container flex lg:flex-row flex-col md:justify-center lg:justify-evenly  p-5 lg:p-2 xl:p-20">
                 <div class="about-1 p-5" data-aos="fade-up"  data-aos-once="true">
-                    <h1 class="text-red-500 text-xl  pb-3 font-extrabold ">Welcome!</h1>
+                    <h1 style="font-family: cursive;" class="text-blue-500 text-xl  pb-3 font-bold ">Welcome!</h1>
                     <P class="text-gray-950 text-left  text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-sans w-[100%] xl:w-[550px] lg:w-[450px] font-bold uppercase" style="letter-spacing: .1rem; word-spacing: .1rem;" >Even the strongest people need a little bit of help to work through some of 
                         life’s most challenging problems. Everyone has hurdles to overcome, and we’d 
                         love to help you along the way.
                         </P>
                     <a href="{% url 'Onboarding:services' %}"><button class="bg-blue-500 p-4 mt-8 w-[200px] text-white text-2xs font-sans uppercase font-bold  cursor-pointer">Our Services</button></a>
                 </div>
-                <div class="about-2 pt-8 p-5 pb-4" data-aos="fade-up"  data-aos-once="true">
-                    <p class="text-gray-500 font-sans  text-[18px] w-[100%] text-left">
+                <div class="about-2 align_middle items-center justify-center   p-5 " data-aos="fade-up"  data-aos-once="true">
+                    <!-- <p class="text-gray-500 font-sans  text-[18px] w-[100%] text-left">
                         Here at Meaningful Minds Therapeutic Services, LLC, we realize that no two 
                         people are the same, and we tailor our services to meet specific needs for 
                         individuals, family or groups. We love helping people understand the things 
@@ -157,8 +157,9 @@
                         recognizing underlying factors, clients can fully realize their strengths and 
                         adjust certain behaviors and thoughts to see things in a different, healthier 
                         way.
-                    </p>
-                        <div class="buttons mt-11  justify-evenly lg:justify-evenly flex md:flex-row flex-col">
+                    </p> -->
+                    <img class="w-[350px] " src="{% static 'images/IMG-20240903-WA0036(1).jpg' %}" alt="">
+                        <div class="buttons mt-5  justify-evenly lg:justify-evenly flex md:flex-row flex-col">
                             <div class="button-1 p-5 items-center mr-3  flex mb-5 lg:mb-0 " style="border: 2px solid rgb(240, 236, 236); border-radius: 2px;">
                                 <img src="{% static 'images/icons8-compassion-50 (2).png' %}" alt="">
                                 <h1 class="pl-5 lg:pl-2  w-full uppercase font-bold">Always put desire above fear</h1>
@@ -170,11 +171,34 @@
                         </div>
                 </div>
             </div>
-
         </section>
         <!-- End of About Section -->
 
-         <!-- Stats Section -->
+        <section id="About">
+          <h1 data-aos="fade-up"  data-aos-once="true" class="text-xl  lg:text-2xl uppercase  text-center text-gray-950 font-bold">Don't wait to get the help you need</h1>
+        <div class="about mx-auto container flex lg:flex-row flex-col-reverse md:justify-center lg:justify-center  p-5 lg:p-2 xl:p-20">
+            <div class="about-1 p-5" data-aos="fade-up"  data-aos-once="true">
+                <!-- <h1 class="text-red-500 text-xl  pb-3 font-extrabold ">Welcome!</h1> -->
+            <img class="w-[100%]" src="{% static 'images/authentic-scene-young-person-undergoing-psychological-therapy.jpg' %}" alt="">
+            </div>
+            <div class="about-2  p-5 pb-4" data-aos="fade-up"  data-aos-once="true">
+                <p class="text-gray-600 font-sans  text-[18px] w-full lg:w-[100%] text-left">
+                  Our practice specializes in helping people who are struggling with addiction, social and life skills, or behavior management. If you are trying to navigate these areas of life, we’re confident that we have the experience to help you rediscover what brings happiness to your life. Through therapy, there is always a way to address the issues you face and learn coping strategies to help you both right now and in the future.
+
+      Through therapy, we can get you on track to leading a happier, more fulfilling life by equipping you with the tools you need to more efficiently and confidently manage life’s challenges.
+                        
+      It is never too late to start living the life you’ve always wanted.
+
+      If you’re interested in becoming a better, happier, more fulfilled you,
+      get started by reaching out today!
+                </p>
+                <a href="{% url 'Onboarding:contacts' %}"><button class="bg-blue-500 p-4 mt-8 w-[200px] text-white text-2xs font-sans uppercase font-bold  cursor-pointer hover:bg-green-600">contact Us</button></a>
+            </div>
+        </div>
+
+    </section>
+
+         <!-- Stats Section
          <div class="stats relative isolate overflow-hidden py-24 sm:py-32">
           <img src="{% static 'images/authentic-scene-young-person-undergoing-psychological-therapy.jpg' %}" alt="" class="absolute fixed inset-0 z-0 h-full w-full object-cover object-right md:object-center">
           <div class="absolute inset-0 z-10 bg-blue-950 opacity-60"></div>
@@ -208,7 +232,7 @@
                 
               </div>
           </div>
-      </div>
+      </div> -->
 
       
 <div class="overflow-hidden bg-white py-20 sm:pt-24 pb-20">
@@ -272,13 +296,25 @@
     <div class="faq-items mx-auto container ">
       <div data-aos="fade-up"  data-aos-once="true"  class="faq-item  mx-auto container ">
         <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
-          <h1  class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">Aren’t people who go to therapy weak?
+          <h1  class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">How do I know I need treatment?
             <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
               &plus;
             </div>
           </h1>
-          <p class="text-gray-500  md:text-[18px] text-[13px]">Not at all. People who ask for help know when they need it and have the courage to reach out. Everyone needs help now and then. In our work together, I’ll help you explore and identify your strengths and how to implement them to reduce the influence of the problems you are facing.
+          <p class="text-gray-500  md:text-[18px] text-[13px]">
+            It’s likely that if you’re reading this, you or someone you know is tired of the way your
+life is now. Addiction can take many forms and is often difficult to identify within oneself.
+You may benefit from treatment if you fit any of the following criteria:
+You’ve been unsuccessful in your attempts to quit on your own.
+It’s difficult to imagine how you will cope without drugs or alcohol.
 
+Your addiction has negatively affected areas in your life such as job, relationships, or
+health.
+The need for change is there, but you just don’t know where to start.
+You have experienced withdrawal symptoms when attempting to stop using.
+The goal of treatment extends further than being physically clean and sober. The real
+purpose is to help you create a life where you no longer feel the need to use drugs and
+alcohol.
           </p>
           
         </div>
@@ -287,13 +323,18 @@
       <div data-aos="fade-up"  data-aos-once="true"  class="faq-item mx-auto container ">
         
         <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
-          <h1  class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">What’s the difference between talking to you or my best friend or family?
+          <h1  class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">How long will I need treatment?
             <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
               <h3 class="cursor-pointer">&plus;</h3>
           </div>
           </h1>
-          <p  class="text-gray-500 md:text-[18px] text-[13px]">The difference is between someone who can do something, and someone who has the training and experience to do that same thing professionally. A mental health professional can help you approach your situation in a new way– teach you new skills, gain different perspectives, listen to you without judgment or expectations, and help you listen to yourself. Furthermore, counseling is completely confidential. You won’t have to worry about others “knowing my business.” Lastly, if your situation provokes a great deal of negative emotion, and you’ve been confiding in a friend or family member, there is the risk that once you are feeling better you could start avoiding that person so you aren’t reminded of this difficult time in your life.
-
+          <p  class="text-gray-500 md:text-[18px] text-[13px]">
+            One of the first things we emphasize in treating addiction is that every individual’s needs
+            are different. There is not a set period that applies to everyone when it comes to
+            treatment. Studies have found that those who spend three months or longer in
+            treatment programs have better rates of long-term sobriety. We offer individualized
+            treatment options depending on the need. When deciding how long to spend in
+            treatment, it is helpful to consult with a professional.
           </p>
           
         </div>
@@ -302,13 +343,19 @@
       <div class="faq-item  mx-auto container " data-aos="fade-up"  data-aos-once="true" >
      
         <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
-          <h1  class="text-[15px] md:text-[20px]text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">Why shouldn’t I just take medication?
+          <h1  class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">I struggle with mental health issues such as anxiety and depression in addition to
+            my addiction. Am I able to receive the help I need?
             <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
               <h3 class="cursor-pointer">&plus;</h3>
           </div>
           </h1>
           <p class="text-gray-500  md:text-[18px] text-[13px]">
-            Medication can be effective but it alone cannot solve all issues. Sometimes medication is needed in conjunction with counseling. Our work together is designed to explore and unpack the problems you are experiencing and expand on your strengths that can help you accomplish your personal goals.
+            The Substance Abuse and Mental Health Services Administration (SAMHSA) estimated
+that almost 8 million American adults battled both a mental health disorder and a
+substance use disorder, or co-occurring/dual diagnosis disorders. It is not uncommon
+for those struggling with addiction to also experience depression, anxiety, or trauma-
+related symptoms. In fact, many of our patients present with co-occurring or dual
+diagnosis conditions, which are addressed throughout treatment.
           </p>
           
         </div>
@@ -318,13 +365,14 @@
        
         <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
           <h1 class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">
-            How does it work? What do I have to do in sessions?
+            Are PRP services voluntary?
             <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
               <h3 class="cursor-pointer">&plus;</h3>
           </div>
           </h1>
           <p class="text-gray-500  md:text-[18px] text-[13px]">
-            Because each person has different issues and goals for counseling, it will be different depending on the individual. I tailor my therapeutic approach to your specific needs.
+            Yes, all psych rehab services are voluntary, but a parent/ guardian may request that an
+            individual participate.
           </p>
           
         </div>
@@ -334,14 +382,14 @@
         
         <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
           <h1 class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">
-            How long will it take?
+            How can I enroll in PRP?
             <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
               <h3 class="cursor-pointer">&plus;</h3>
           </div>
           </h1>
           <p class="text-gray-500 md:text-[18px] text-[13px]">
-            Unfortunately, this is not possible to say in a general FAQs page. Everyone’s circumstances are unique to them and the length of time counseling can take to allow you to accomplish your goals depends on your desire for personal development, your commitment, and the factors that are driving you to seek counseling in the first place.
-
+            You can enroll in PRP by seeing a therapist, psychiatrist, or other licensed mental
+            health professional and expressing interest in PRP services.
           </p>
           
         </div>
@@ -351,14 +399,15 @@
 
         <div class="faq-text py-3" style=" border-top: 1px solid lightgreen;">
           <h1 class="text-[15px] md:text-[20px] text flex items-center align-middle justify-between text-blue-400 font-bold pb-1">
-            I want to get the most out of therapy. What can I do to help?
+            What are the benefits of PRP?
             <div class="faq-symbol text-2xl font-bold text-blue-500 cursor-pointer">
               <h3 class="cursor-pointer">&plus;</h3>
           </div>
           </h1>
           <p class="text-gray-500  md:text-[18px] text-[13px]">
-            I am so glad you are dedicated to getting the most out of your sessions. Your active participation and dedication will be crucial to your success.
-
+            PRP can help people manage the challenges of mental illness and life skills, such as
+            understanding mental health disorders, medication management, and conflict
+            resolution, behavior management and academic achievement.
           </p>
           
         </div>
@@ -391,10 +440,10 @@
     <a href="{% url 'Onboarding:home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <img  class="rounded-[20px] w-[250px]" src="{% static 'images/mm logo.jpg' %}">
     </a>
-    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> 606 Edmonson Rd, 200-201 Catonsville, MD 21228
+    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> 606 Edmondson Ave Suite 200
     </p>
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a href="mailto:info@mmtsofmd.com" class="mt-2 text-sm text-gray-200">info@mmtsofmd.com</a>
+      <a href="mailto:meaningfulmindsllc@gmail.com" class="mt-2 text-sm text-gray-200">meaningfulmindsllc@gmail.com</a>
     </span>
   </div>
 </footer>
@@ -406,7 +455,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
-    duration: 2000,
+    duration: 1000,
     once: true,
   });
 </script>
