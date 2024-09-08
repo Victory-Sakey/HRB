@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=8">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
     <style>
         .hidden {
           display: none;
@@ -30,6 +33,13 @@
 .faq-text p.show {
   max-height: 1000px; /* Adjust according to the content */
   transition: max-height 0.5s ease-in;
+}
+
+#welcome-banner h1 , #About .about .about-1 h1 {
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
       </style>
@@ -54,6 +64,8 @@
                       <a href="{% url 'Onboarding:about' %}" class="rounded-md px-3 py-2 text-sm uppercase font-medium">About US</a>
                       <a href="{% url 'Onboarding:services' %}" class=" px-3 py-2 text-sm uppercase font-medium">Our services</a>
                       <a href="{% url 'Onboarding:contacts' %}" class=" px-3 py-2 text-sm uppercase font-medium">Contact us</a>
+                      <a target="_blank" class="px-3 py-2 text-sm uppercase font-medium" href="https://forms.gle/SYngRR6FtZ67UbB78">Career</a>
+                <a target="_blank" class="px-3 py-2 text-sm uppercase font-medium" href="https://forms.gle/5WsGnkkdFrFPkRaF6">Referral</a>
                     </div>
                   </div>
                 </div>
@@ -78,6 +90,8 @@
                 <a href="{% url 'Onboarding:about' %}" class=" block rounded-md px-3 py-2 text-base font-medium">About Us</a>
                 <a href="{% url 'Onboarding:services' %}" class=" block rounded-md px-3 py-2 text-base font-medium">Our Services</a>
                 <a href="{% url 'Onboarding:contacts' %}" class=" block rounded-md px-3 py-2 text-base font-medium">Contact Us</a>
+                <a target="_blank" class=" block rounded-md px-3 py-2 text-base font-medium" href="https://forms.gle/SYngRR6FtZ67UbB78">Career</a>
+                <a target="_blank" class=" block rounded-md px-3 py-2 text-base font-medium" href="https://forms.gle/5WsGnkkdFrFPkRaF6">Referral</a>
               </div>
             </div>
           </nav>
@@ -132,7 +146,7 @@
             <img src="{% static 'images/47250.jpg'%}" alt="" class="background">
             <img src="{% static 'images/woman-therapy-session-attentive-psychologist-attentive-psychologist-holding-pencil-her-hands-making-written-notes-while-listening-her-client.jpg' %}" alt="" class="background">
           </div>
-          <h1 style="font-family: cursive;" class="uppercase font-bold">"From Healing to <span class="text-blue-400 font-bold">Wholeness</span>"</h1>
+          <h1  class=" uppercase font-bold">"From Healing to <span class="text-blue-400 font-bold">Wholeness</span>"</h1>
           <a href="{% url 'Onboarding:about' %}"><button>Get Started</button></a>
         </section>
         <!-- End of Welcome Banner -->
@@ -240,19 +254,17 @@
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div class="lg:pr-8 lg:pt-4">
         <div class="lg:max-w-lg">
-          <h2 data-aos="fade-up"  data-aos-once="true" class="text-base font-semibold leading-7 text-green-600">Affordable Therapy</h2>
+          <!-- <h2 data-aos="fade-up"  data-aos-once="true" class="text-base font-semibold leading-7 text-green-600">Affordable Therapy</h2> -->
           <p data-aos="fade-up"  data-aos-once="true" class="mt-2 text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl">Rates & Insurance</p>
           <p class="mt-6 text-lg leading-8 text-gray-600" data-aos="fade-up"  data-aos-once="true" >
-            $_____ per ______ minute session.
-            <br>
-            <br>
+            <!-- $_____ per ______ minute session. -->
             Depending on your current health insurance provider or employee benefit plan, it is possible for services to be covered in full or in part. Please contact your provider to verify how your plan compensates you for psychotherapy services.</p>
           <dl data-aos="fade-up"  data-aos-once="true" class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
             <div class="relative">
               <dt class="inline font-semibold text-green-900">
                 Payment. 
               </dt>
-              <dd class="inline">We accept cash, check and all major credit cards as forms of payment. I also accept payment directly on my site via this page.
+              <dd class="inline">We accept cash and cheques.
 
               </dd>
             </div>
@@ -434,18 +446,42 @@ diagnosis conditions, which are addressed throughout treatment.
   ```
 -->
 
- 
 <footer class="bg-blue-950 text-gray-600 body-font" data-aos="zoom-in"  data-aos-once="true">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a href="{% url 'Onboarding:home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <img  class="rounded-[20px] w-[250px]" src="{% static 'images/mm logo.jpg' %}">
     </a>
     <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> 606 Edmondson Ave Suite 200
+    
     </p>
-    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-      <a href="mailto:meaningfulmindsllc@gmail.com" class="mt-2 text-sm text-gray-200">meaningfulmindsllc@gmail.com</a>
+    
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center flex-col sm:justify-start">
+      <a href="mailto:meaningfulmindsllc@gmail.com" class="mt-2 mb-2 text-sm text-gray-200">meaningfulmindsllc@gmail.com</a>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a target="_blank" href="https://web.facebook.com/profile.php?id=100089789233240" class="text-gray-500 cursor-pointer">  
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a target="_blank" href="https://x.com/meaningful45835" class="ml-3 cursor-pointer text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a target="_blank"  href="https://www.instagram.com/meaningfulmindsllc/" class="ml-3 cursor-pointer text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+      </span>
     </span>
   </div>
+  <p class="text-xs text-gray-400 p-2">
+Partnerships:
+Baltimore City District Court- Addiction Recovery Court/Truancy Court | Milestones Child Care Center | Addiction Wellness Center | Baltimore County Government-Quick Response Team (QRT) | Behavioral Health Administration-Substance Abuse Treatment Services
+(SATS)Program | University of Maryland School of Medicine-Department of Psychiatry
+  </p>
 </footer>
  
 
