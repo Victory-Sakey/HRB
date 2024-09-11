@@ -163,7 +163,7 @@
                     <a href="{% url 'Onboarding:services' %}"><button class="bg-blue-500 p-4 mt-8 w-[200px] text-white text-2xs font-sans uppercase font-bold  cursor-pointer">Our Services</button></a>
                 </div>
                 <div class="about-2 align_middle items-center justify-center   p-5 " data-aos="fade-up"  data-aos-once="true">
-                    <!-- <p class="text-gray-500 font-sans  text-[18px] w-[100%] text-left">
+                   <p class="text-gray-500 font-sans  text-[18px] w-[100%] text-left">
                         Here at Meaningful Minds Therapeutic Services, LLC, we realize that no two 
                         people are the same, and we tailor our services to meet specific needs for 
                         individuals, family or groups. We love helping people understand the things 
@@ -171,8 +171,8 @@
                         recognizing underlying factors, clients can fully realize their strengths and 
                         adjust certain behaviors and thoughts to see things in a different, healthier 
                         way.
-                    </p> -->
-                    <img class="w-[350px] " src="{% static 'images/IMG-20240903-WA0036(1).jpg' %}" alt="">
+                    </p> 
+                    
                         <div class="buttons mt-5  justify-evenly lg:justify-evenly flex md:flex-row flex-col">
                             <div class="button-1 p-5 items-center mr-3  flex mb-5 lg:mb-0 " style="border: 2px solid rgb(240, 236, 236); border-radius: 2px;">
                                 <img src="{% static 'images/icons8-compassion-50 (2).png' %}" alt="">
@@ -451,7 +451,11 @@ diagnosis conditions, which are addressed throughout treatment.
     <a href="{% url 'Onboarding:home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <img  class="rounded-[20px] w-[250px]" src="{% static 'images/mm logo.jpg' %}">
     </a>
-    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4"> 606 Edmondson Ave Suite 200
+    <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 flex flex-col justify-center align-items"> 
+
+      <h1 class="text-white pr-3"> 606 Edmondson Ave Suite 200 </h1>
+      <br>
+      <img class=" mt-2 w-[80px] items-center align-middle justify-center " src="{% static 'images/IMG-20240903-WA0036(1).jpg' %}" alt="">
     
     </p>
     
