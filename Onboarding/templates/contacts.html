@@ -25,13 +25,7 @@
       overflow: hidden;
     }
 
-    #welcome-banner h1 , #About .about .about-1 h1 {
-  font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
+  
       </style>
 </head>
 <body>
@@ -216,7 +210,6 @@
 -->
 
 
- 
 <footer class="bg-blue-950 text-gray-600 body-font" data-aos="zoom-in"  data-aos-once="true">
   <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a href="{% url 'Onboarding:home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
@@ -224,14 +217,19 @@
     </a>
     <p class="text-sm text-gray-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4 flex flex-col justify-center align-items"> 
 
-      <h1 class="text-white pr-3"> 606 Edmondson Ave Suite 200 </h1>
+      <h1 class="text-white pr-3 text-center"> 606 Edmondson Ave Suite 200
+        <br>
+        <a href="mailto:meaningfulmindsllc@gmail.com">meaningfulmindsllc@gmail.com</a>
+        <br>
+        <a href="{% url 'Onboarding:home' %}">410-449-3988</a></h1>
+      
       <br>
-      <img class=" mt-2 w-[80px] items-center align-middle justify-center " src="{% static 'images/IMG-20240903-WA0036(1).jpg' %}" alt="">
+      <img class=" mt-2 w-[80px] rounded-lg items-center align-middle justify-center " src="{% static 'images/IMG-20240903-WA0036(1).jpg' %}" alt="">
     
     </p>
     
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center flex-col sm:justify-start">
-      <a href="mailto:meaningfulmindsllc@gmail.com" class="mt-2 mb-2 text-sm text-gray-200">meaningfulmindsllc@gmail.com</a>
+      <a href="mailto:meaningfulmindsllc@gmail.com" class="mt-2 mb-2 text-sm text-gray-200">meaningfulmindsllc</a>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
         <a target="_blank" href="https://web.facebook.com/profile.php?id=100089789233240" class="text-gray-500 cursor-pointer">  
           <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
@@ -254,10 +252,9 @@
   </div>
   <p class=" text-gray-400 p-2">
    
-    <img src="{% static 'images/IMG-20240919-WA0010.jpg' %}" alt="">
+    <img src="{% static 'images/mmm partners logos.jpg' %}" alt="">
   </p>
 </footer>
-
       
     </main>
 

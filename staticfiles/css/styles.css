@@ -182,6 +182,8 @@ main #welcome-banner:before {
     position: absolute;
     width: 100%;
     height: 100%;
+    background-position: center;
+    background-size: contain;
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
