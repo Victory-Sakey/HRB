@@ -9,12 +9,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'images/site.webmanifest' %}">
     <title>Meaningful Mind Therapeutic Services</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}?v=12">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
     <style>
         .hidden {
           display: none;
@@ -24,7 +27,7 @@
       overflow: hidden;
     }
 
-    .faq-text p {
+.faq-text p {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
@@ -35,16 +38,17 @@
   transition: max-height 0.5s ease-in;
 }
 
+
 #welcome-banner h1 , #About .about .about-1 h1 {
-  font-family: "Playwrite CU", cursive;
+  font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: <weight>;
   font-style: normal;
 }
 
       </style>
 </head>
-<body>
+<body class="font-sans">
     
 <!-- NavBar -->
     <header>
@@ -146,7 +150,7 @@
             <img src="{% static 'images/47250.jpg'%}" alt="" class="background">
             <img src="{% static 'images/woman-therapy-session-attentive-psychologist-attentive-psychologist-holding-pencil-her-hands-making-written-notes-while-listening-her-client.jpg' %}" alt="" class="background">
           </div>
-          <h1  class="  font-bold">"From Healing to <span class="text-blue-400 font-bold">Wholeness</span>"</h1>
+          <h1  class="sm:text-5xl text-3xl  font-bold">"From Healing to <span class="text-blue-400 font-bold">Wholeness</span>"</h1>
           <a href="{% url 'Onboarding:about' %}"><button>Get Started</button></a>
         </section>
         <!-- End of Welcome Banner -->
@@ -155,7 +159,7 @@
         <section id="About">
             <div class="about mx-auto container flex lg:flex-row flex-col md:justify-center lg:justify-evenly  p-5 lg:p-2 xl:p-20">
                 <div class="about-1 p-5" data-aos="fade-up"  data-aos-once="true">
-                    <h1  class="text-blue-500 text-xl  pb-3 font-bold ">Welcome!</h1>
+                    <h1  class="text-blue-500 text-2xl  pb-3 font-bold ">Welcome!</h1>
                     <P class="text-gray-950 text-left  text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-sans w-[100%] xl:w-[550px] lg:w-[450px] font-bold uppercase" style="letter-spacing: .1rem; word-spacing: .1rem;" >Even the strongest people need a little bit of help to work through some of 
                         life’s most challenging problems. Everyone has hurdles to overcome, and we’d 
                         love to help you along the way.
@@ -260,21 +264,7 @@
             <!-- $_____ per ______ minute session. -->
             Depending on your current health insurance provider or employee benefit plan, it is possible for services to be covered in full or in part. Please contact your provider to verify how your plan compensates you for psychotherapy services.</p>
           <dl data-aos="fade-up"  data-aos-once="true" class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-            <div class="relative">
-              <dt class="inline font-semibold text-green-900">
-                Payment. 
-              </dt>
-              <dd class="inline">We accept cash and cheques.
-
-              </dd>
-            </div>
-            <div class="relative">
-              <dt class="inline font-semibold text-green-900">
-               
-                Cancellation Policy. 
-              </dt>
-              <dd class="inline">If you are unable to attend a session, please make sure you cancel at least 24 hours beforehand. Otherwise, you may be charged for the full rate of the session.</dd>
-            </div>
+           
             <div class="relative">
               <dt class="inline font-semibold text-green-900">
                 

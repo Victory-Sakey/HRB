@@ -9,9 +9,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'images/site.webmanifest' %}">
     <title>About Us | Meaningful Mind Therapeutic Services</title>
-    <link rel="stylesheet" href="{% static 'css/about.css' %}?v=10">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}?v=11">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <style>
         .hidden {
           display: none;
@@ -20,6 +24,14 @@
       transition: height 0.3s ease;
       overflow: hidden;
     }
+
+    #welcome-banner h1 , #About .about .about-1 h1 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
       </style>
 </head>
 <body>
@@ -123,13 +135,13 @@
             <img src="{% static 'images/47250.jpg'%}" alt="" class="background">
             <img src="{% static 'images/woman-therapy-session-attentive-psychologist-attentive-psychologist-holding-pencil-her-hands-making-written-notes-while-listening-her-client.jpg' %}" alt="" class="background">
           </div>
-          <h1 class="font-mono font-extrabold text-left">ABOUT <span class="text-blue-400">US</span></h1>
-         <h3 class="font-bold font-mono text-white pl-[90px] uppercase">Home | About Us</h3>
+          <h1 class="font-mono text-3xl sm:text-5xl font-extrabold text-left">ABOUT <span class="text-blue-400">US</span></h1>
+         <h3 class="smtext-4xl text-2xl font-bold font-mono text-white pl-[90px] uppercase">Home | About Us</h3>
         </section>
         <!-- End of Welcome Banner -->
 
         <!-- About Section -->
-      <section id="About" class="lg:mt-10 mt-0" >
+      <section id="About" class="lg:mt-10 mt-10" >
             <div class="about mx-auto container flex lg:flex-row flex-col bg-blue-200 md:justify-center lg:justify-evenly  xl:p-20">
                 <div class="about-1 p-5" data-aos="fade-up"  data-aos-once="true">
                     <h2 class="uppercase font-bold text-5xl text-blue-500 font-sans tracking-tight pb-5">Our Mission</h2>
